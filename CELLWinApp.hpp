@@ -204,20 +204,20 @@ namespace   CELL
 // 				mat.rotateZ(inc);//Ðý×ª
 //              inc +=  1;
 
-				static  float   inc = 1;
-				mat.translate (inc,0,0);//Æ½ÒÆ
-				inc += 0.5f;
+// 				static  float   inc = 1;
+// 				mat.translate (inc,0,0);//Æ½ÒÆ
+// 				inc += 0.5f;
+// 
+//                 CELL::matrix4   matMVP  =   screenProj * mat;//¾ØÕó±ä»»
+// 
+// 
+//                 glUniformMatrix4fv(_shader._MVP, 1, false, matMVP.data());
+//                 glVertexAttribPointer(_shader._position,2,GL_FLOAT,         false,  sizeof(Vertex),vertex);
+//                 glVertexAttribPointer(_shader._color,   4,GL_UNSIGNED_BYTE, true,   sizeof(Vertex),&vertex[0].color);
+//                 glDrawArrays(GL_TRIANGLE_STRIP,0,4);
 
-                CELL::matrix4   matMVP  =   screenProj * mat;//¾ØÕó±ä»»
 
-
-                glUniformMatrix4fv(_shader._MVP, 1, false, matMVP.data());
-                glVertexAttribPointer(_shader._position,2,GL_FLOAT,         false,  sizeof(Vertex),vertex);
-                glVertexAttribPointer(_shader._color,   4,GL_UNSIGNED_BYTE, true,   sizeof(Vertex),&vertex[0].color);
-                glDrawArrays(GL_TRIANGLE_STRIP,0,4);
-
-
-#if 0
+//#if 0
 
 				glUniformMatrix4fv(_shader._MVP, 1, false, screenProj.data());
 				glVertexAttribPointer(_shader._position,2,GL_FLOAT,         false,  sizeof(Vertex),vertex);
@@ -241,7 +241,7 @@ namespace   CELL
                 glVertexAttribPointer(_shader._position,2,GL_FLOAT,         false,  sizeof(Vertex),circle);
                 glVertexAttribPointer(_shader._color,   4,GL_UNSIGNED_BYTE, true,   sizeof(Vertex),&circle[0].color);
                 glDrawArrays(GL_TRIANGLE_FAN,0,362);
-#endif
+//#endif
             }
             _shader.end();
 
